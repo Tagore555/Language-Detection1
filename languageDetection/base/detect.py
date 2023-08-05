@@ -3,13 +3,11 @@ def lang_detect(text):
   import re
   import string
   import pickle
-  import os 
+
 
   translate_table = str.maketrans('', '', string.punctuation)
   global lrLangDetectmode1
-  file_path = os.path.join(os.path.dirname(__file__), 'LRModel.pck1')
-  lrLangDetectFile = open(file_path, 'rb')
-  #lrLangDetectFile=open('LRModel.pck1','rb')
+  lrLangDetectFile=open('LRModel.pck1','rb')
   lrLangDetectmode1=pickle.load(lrLangDetectFile)
   lrLangDetectFile.close()
   
